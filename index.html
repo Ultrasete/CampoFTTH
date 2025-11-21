@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de CTOs</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +34,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .input-field {
+            /* Estilo Tailwind CSS em @apply */
             @apply w-24 text-xs p-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out flex-shrink-0;
             text-align: center;
         }
@@ -78,7 +79,7 @@
         .printable-only-description {
             display: none;
         }
-       
+        
        @media print {
             body > .container > header,
             body .border-b.no-print,
@@ -143,12 +144,12 @@
                                 Imprimir CTOs
                             </a>
                             <a href="#" onclick="downloadFieldReport()" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                Relatório de Campo
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                 Relatório de Campo
                             </a>
                             <a href="#" onclick="shareProject()" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367 2.684z" /></svg>
-                                Compartilhar
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367 2.684z" /></svg>
+                                 Compartilhar
                             </a>
                         </div>
                     </div>
@@ -168,7 +169,6 @@
             </nav>
         </div>
 
-        <!-- Painel Rede Desbalanceada -->
         <div id="tab-panel-desbalanceada" class="tab-panel printable-area">
             <div class="section-card">
                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Parâmetros da Rede Desbalanceada</h2>
@@ -180,7 +180,7 @@
                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.527-1.912 6.01 6.01 0 012.142 4.072 6.01 6.01 0 01-3.668 5.473 1.503 1.503 0 01-1.499.044 2 2 0 00-2.427 0 2 2 0 01-1.527 1.912 6.01 6.01 0 01-3.8-5.57z" clip-rule="evenodd" /></svg>
                          </button>
                      </div>
-                </div>
+                 </div>
                  <div class="max-w-xs mx-auto mb-6">
                     <label for="olt-power-input-unbalanced" class="font-bold text-lg text-gray-600 text-center block mb-2">Potência OLT</label>
                     <div class="flex items-center">
@@ -189,8 +189,7 @@
                     </div>
                 </div>
                 <div id="network-layout-container" class="flex flex-wrap justify-center gap-4">
-                    <!-- Cards will be inserted here -->
-                </div>
+                    </div>
                 <div class="flex flex-wrap justify-center mt-6 gap-4">
                     <button onclick="addSpliceBox('unbalanced')" class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold py-3 px-5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01M12 6v12" /></svg>
@@ -206,7 +205,6 @@
             </div>
         </div>
         
-        <!-- Painel Rede Balanceada -->
         <div id="tab-panel-balanceada" class="hidden tab-panel printable-area">
              <div class="section-card">
                 <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Parâmetros da Rede Balanceada</h2>
@@ -218,7 +216,7 @@
                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.527-1.912 6.01 6.01 0 012.142 4.072 6.01 6.01 0 01-3.668 5.473 1.503 1.503 0 01-1.499.044 2 2 0 00-2.427 0 2 2 0 01-1.527 1.912 6.01 6.01 0 01-3.8-5.57z" clip-rule="evenodd" /></svg>
                          </button>
                      </div>
-                </div>
+                 </div>
                  <div class="max-w-xs mx-auto mb-6">
                     <label for="olt-power-input-balanced" class="font-bold text-lg text-gray-600 text-center block mb-2">Potência OLT</label>
                     <div class="flex items-center">
@@ -233,11 +231,13 @@
                     </div>
                 </div>
                  <div id="balanced-network-container" class="flex flex-wrap justify-center gap-4">
-                     <!-- Cards will be inserted here -->
-                 </div>
+                     </div>
                  <div class="flex flex-wrap justify-center mt-6 gap-4">
                      <button onclick="addSpliceBox('balanced')" class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold py-3 px-5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01M12 6v12" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01M12 6v12"></path>
+                        </svg>
                         + CEO/CDR
                     </button>
                      <button onclick="addBalancedCto()" class="bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold py-3 px-5 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center">
@@ -249,26 +249,17 @@
                  </div>
              </div>
         </div>
-    </div>
-    
-    <!-- Modal para Descrição -->
-    <div id="description-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
-            <div class="p-6 text-left">
-                <h3 class="text-xl font-bold text-gray-800">Descrição do Sinal</h3>
-                <div class="mt-4">
-                    <label for="signal-description-input" class="block text-sm font-medium text-gray-700">Adicione uma nota sobre o sinal medido:</label>
-                    <textarea id="signal-description-input" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
-                </div>
+
+        <div class="section-card printable-area">
+            <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">Lista de Materiais e Orçamento</h2>
+            <p class="text-center text-sm text-gray-500 mb-4">A lista é calculada com base na aba de rede que está ativa (<span id="active-network-label" class="font-bold"></span>).</p>
+            <div class="max-w-4xl mx-auto">
+                <table class="w-full text-sm" id="materials-table"></table>
             </div>
-            <div class="bg-gray-100 px-6 py-4 flex justify-end gap-3 rounded-b-lg">
-                <button onclick="closeDescriptionModal()" class="px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">Cancelar</button>
-                <button onclick="saveDescription()" class="px-4 py-2 bg-indigo-600 text-white text-base font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Salvar</button>
-            </div>
+             <div id="materials-calculation-details" class="max-w-4xl mx-auto mt-6"></div>
         </div>
     </div>
-
-    <!-- Modal para Alertas -->
+    
     <div id="custom-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
             <div class="p-6">
@@ -283,12 +274,76 @@
         </div>
     </div>
 
+    <!-- Modal da Calculadora -->
+    <div id="calculatorModal" class="no-print hidden fixed z-50 left-0 top-0 w-full h-full bg-black/50 justify-center items-center" style="display: none;">
+        <div class="bg-gray-200 p-4 rounded-lg shadow-xl w-full max-w-xs">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Calculadora</h2>
+                <button id="closeCalcModalBtn" class="text-2xl font-bold">&times;</button>
+            </div>
+            <div id="calc-display" class="bg-white text-right p-2 rounded mb-2 text-3xl font-mono break-all">0</div>
+            <div class="grid grid-cols-4 gap-2 text-lg">
+                <button data-value="clear" class="calc-btn bg-red-500 hover:bg-red-600 text-white">C</button>
+                <button data-value="/" class="calc-btn bg-gray-400 hover:bg-gray-500 text-white">/</button>
+                <button data-value="*" class="calc-btn bg-gray-400 hover:bg-gray-500 text-white">*</button>
+                <button data-value="-" class="calc-btn bg-gray-400 hover:bg-gray-500 text-white">-</button>
+                
+                <button data-value="7" class="calc-btn bg-white hover:bg-gray-100">7</button>
+                <button data-value="8" class="calc-btn bg-white hover:bg-gray-100">8</button>
+                <button data-value="9" class="calc-btn bg-white hover:bg-gray-100">9</button>
+                <button data-value="+" class="calc-btn bg-gray-400 hover:bg-gray-500 text-white row-span-2">+</button>
+
+                <button data-value="4" class="calc-btn bg-white hover:bg-gray-100">4</button>
+                <button data-value="5" class="calc-btn bg-white hover:bg-gray-100">5</button>
+                <button data-value="6" class="calc-btn bg-white hover:bg-gray-100">6</button>
+
+                <button data-value="1" class="calc-btn bg-white hover:bg-gray-100">1</button>
+                <button data-value="2" class="calc-btn bg-white hover:bg-gray-100">2</button>
+                <button data-value="3" class="calc-btn bg-white hover:bg-gray-100">3</button>
+                <button data-value="=" class="calc-btn bg-blue-500 hover:bg-blue-600 text-white row-span-2">=</button>
+
+                <button data-value="0" class="calc-btn bg-white hover:bg-gray-100 col-span-2">0</button>
+                <button data-value="." class="calc-btn bg-white hover:bg-gray-100">.</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal da Previsão do Tempo -->
+    <div id="weatherModal" class="no-print hidden fixed z-50 left-0 top-0 w-full h-full bg-black/50 justify-center items-center" style="display: none;">
+         <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-lg">
+             <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Previsão do Tempo</h2>
+                <button id="closeWeatherModalBtn" class="text-2xl font-bold">&times;</button>
+            </div>
+            <!-- Widget de Clima -->
+            <div class="bg-gray-100 p-4 rounded-lg shadow-inner w-full">
+                <div id="weatherWidget" class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div id="weatherIcon" class="w-16 h-16 rounded-md flex items-center justify-center text-5xl"></div>
+                        <div>
+                            <div id="weatherTemp" class="font-bold text-2xl">--° / --°</div>
+                            <div id="weatherCity" class="text-md text-gray-600">Carregando...</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="text" id="cityInput" placeholder="Mudar cidade" class="p-2 border rounded-md text-sm w-32">
+                        <button id="updateWeatherBtn" class="bg-gray-500 text-white p-2 rounded-md hover:bg-gray-600 text-sm h-full px-3">OK</button>
+                    </div>
+                </div>
+                <!-- Previsão para os próximos dias -->
+                <div id="weatherForecast" class="flex justify-between space-x-2 mt-4 w-full">
+                    <!-- A previsão será inserida aqui via JavaScript -->
+                </div>
+            </div>
+         </div>
+    </div>
+
     <footer class="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600 no-print">
         <div class="max-w-2xl mx-auto">
             <h3 class="text-xl font-bold text-gray-800">Suporte e Contato</h3>
             <p class="mt-4 font-semibold">Para dúvidas ou sugestões, entre em contato:</p>
             <a href="https://wa.me/5575998312170" target="_blank" class="mt-2 inline-flex items-center bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition-colors shadow-md">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.152,4.26C8.24,4.26,6.65,5.85,6.65,7.761c0,0.619,0.161,1.196,0.446,1.714L6.92,9.88l-0.565,1.977l2.03-0.555	C8.75,11.536,9.423,11.69,10.152,11.69c1.91,0,3.5-1.59,3.5-3.5S12.062,4.26,10.152,4.26z M15.654,14.188	c-0.326-0.164-1.932-0.951-2.232-1.062s-0.519-0.164-0.739,0.164s-0.843,1.062-1.033,1.282s-0.38,0.246-0.705,0.082	s-1.378-0.506-2.624-1.619s-1.958-2.26-2.193-2.646s-0.246-0.58,0.156-0.744c0.094-0.037,0.203-0.09,0.301-0.136	c0.237-0.113,0.312-0.188,0.402-0.313c0.113-0.15,0.168-0.281,0.249-0.459c0.082-0.178,0.041-0.329-0.021-0.492	c-0.062-0.164-0.657-1.583-0.9-2.166c-0.237-0.564-0.485-0.485-0.657-0.492c-0.164-0.01-0.348-0.01-0.533-0.01	c-0.185,0-0.485,0.082-0.739,0.41s-0.9,0.884-0.9,2.144s0.923,2.481,1.053,2.646s1.82,2.777,4.416,3.91	c2.596,1.133,2.596,0.754,3.056,0.732c0.46-0.021,1.523-0.621,1.739-1.22c0.216-0.598,0.216-1.107,0.156-1.22	C16.151,14.398,15.98,14.352,15.654,14.188z M10.001,0C4.486,0,0,4.486,0,10.001c0,5.514,4.486,10,10.001,10	c5.514,0,10-4.486,10-10.001C20.001,4.486,15.515,0,10.001,0z M10.001,18.13c-4.48,0-8.128-3.649-8.128-8.129	c0-4.48,3.649-8.128,8.128-8.128c4.48,0,8.129,3.649,8.129,8.128C18.13,14.481,14.481,18.13,10.001,18.13z"/></svg>
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.152,4.26C8.24,4.26,6.65,5.85,6.65,7.761c0,0.619,0.161,1.196,0.446,1.714L6.92,9.88l-0.565,1.977l2.03-0.555	C8.75,11.536,9.423,11.69,10.152,11.69c1.91,0,3.5-1.59,3.5-3.5S12.062,4.26,10.152,4.26z M15.654,14.188	c-0.326-0.164-1.932-0.951-2.232-1.062s-0.519-0.164-0.739,0.164s-0.843,1.062-1.033,1.282s-0.38,0.246-0.705,0.082	s-1.378-0.506-2.624-1.619s-1.958-2.26-2.193-2.646s-0.246-0.58,0.156-0.744c0.094-0.037,0.203-0.09,0.301-0.136	c0.237-0.113,0.312-0.188,0.402-0.313c0.113-0.15,0.168-0.281,0.249-0.459c0.082-0.178,0.041-0.329-0.021-0.492	c-0.062-0.164-0.657-1.583-0.9-2.166c-0.237-0.564-0.485-0.485-0.657-0.492c-0.164-0.01-0.348-0.01-0.533-0.01	c-0.185,0-0.485,0.082-0.739,0.41s-0.9,0.884-0.9,2.144s0.923,2.481,1.053,2.646s1.82,2.777,4.416,3.91	c2.596,1.133,2.596,0.754,3.056,0.732c0.46-0.021,1.523-0.621,1.739-1.22c0.216-0.598,0.216-1.107,0.156-1.22	C16.151,14.398,15.98,14.352,15.654,14.188z M10.001,0C4.486,0,0,4.486,0,10.001c0,5.514,4.486,10,10.001,10	c5.514,0,10-4.486,10-10.001C20.001,4.486,15.515,0,10.001,0z M10.001,18.13c-4.48,0-8.128-3.649-8.129-8.129	c0-4.48,3.649-8.128,8.128-8.128c4.48,0,8.129,3.649,8.129,8.128C18.13,14.481,14.481,18.13,10.001,18.13z"/></svg>
                 Chamar no WhatsApp: +55 75 99831-2170
             </a>
             <p class="mt-6 text-sm text-gray-500">Desenvolvido por Jânio Carlos 10/08/2025</p>
@@ -296,11 +351,36 @@
     </footer>
 
 
-    <script>
+    <script id="main-logic-script">
+        // --- Lógica para o novo menu de ferramentas ---
+        function toggleMenu() {
+            const dropdown = document.getElementById('main-menu-dropdown');
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Fecha o menu se o usuário clicar fora dele
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('main-menu-dropdown');
+            const button = document.getElementById('menu-button');
+            if (dropdown && !dropdown.classList.contains('hidden')) {
+                if (button && !button.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            }
+        });
+
+
         // --- Variáveis de Estado Globais ---
         let oltPower = 7.00;
         let projectName = '';
+        let technicianName = '';
         let googleMapsUrl = '';
+        let oltPortNumber = '';
+        let dioGroup = '';
+        let fiberColor = '';
+        let fiberRuns = [{ type: 'Fibra Óptica 12 FO', length: 0 }];
+        let manualMaterials = {};
+        let materialPrices = {};
         let activeTab = 'desbalanceada';
         let networkSegments = [];
         let balancedConfig = { primarySplitter: '1:8' };
@@ -308,8 +388,11 @@
         const FIBER_LOSS_PER_KM = 0.10;
         const FUSION_SPLICE_LOSS = 0.10;
         let debounceTimer = null;
-        let currentCtoInfo = null;
+        let recalculateTimer = null; // Timer para Recálculo de CTO/CEO
         let saveTimeout;
+        let customMaterials = [];
+        let manualMaterialNames = {};
+        
 
         const FIBER_COLORS = [
             { name: 'Verde', hex: '#28a745', text: 'white' }, { name: 'Amarelo', hex: '#ffc107', text: 'black' },
@@ -321,16 +404,23 @@
         ];
     
         const UNBALANCED_CTO_ROWS = [
-          { label: 'Sinal Entrada', key: 'sinalEntradaHub', type: 'result' },
+          { label: 'Sinal Entrada', key: 'sinalEntradaHub', type: 'result', outputId: 'sinalEntradaHub' },
           { label: 'Splitter Desb.', key: 'splitterHub', type: 'select_hub' },
-          { label: 'Perda Passagem', key: 'perdaPassagemHub', type: 'result_detail' },
-          { label: 'Sinal Saída', key: 'sinalSaidaHub', type: 'result' },
-          { label: 'Perda Trecho', key: 'perdaTotalTrecho', type: 'result_detail' },
+          { label: 'Perda Passagem', key: 'perdaPassagemHub', type: 'result_detail', outputId: 'perdaPassagemHub' },
+          { label: 'Sinal Saída', key: 'sinalSaidaHub', type: 'result', outputId: 'sinalSaidaHub' },
+          { label: 'Perda Trecho', key: 'perdaTotalTrecho', type: 'result_detail', outputId: 'perdaTotalTrecho' },
           { label: 'Splitter CTO', key: 'splitterCto', type: 'select_cto' },
-          { label: 'Sinal Final CTO', key: 'sinalFinalCto', type: 'result_final' },
+          { label: 'Sinal Final CTO', key: 'sinalFinalCto', type: 'result_final', outputId: 'sinalFinalCto' },
         ];
-
+        
         const UNBALANCED_SPLICE_BOX_ROWS = [];
+        
+        const BALANCED_CTO_ROWS = [
+             { label: 'Splitter CTO', key: 'splitterCto', type: 'select_cto' },
+             { label: 'Sinal Final CTO', key: 'sinalFinal', type: 'result_final', outputId: 'sinalFinal' }
+        ];
+        
+        const BALANCED_SPLICE_BOX_ROWS = [];
         
         const splitterLosses = { 
           'Ausente': { drop: 0, pass: 0 }, '1:2': { drop: 3.7 }, '1:4': { drop: 7.1 }, '1:8': { drop: 10.5 }, '1:16': { drop: 13.7 }, '1:32': { drop: 17.1 }, '1:64': { drop: 20.4 }, '1:128': { drop: 23.9 }, 
@@ -351,6 +441,187 @@
             return list.map(key => `<option value="${key}" ${key === selectedValue ? 'selected' : ''}>${key}</option>`).join('');
         }
 
+        // --- FUNÇÃO DE LISTA DE MATERIAIS MOVIDA PARA CIMA ---
+        // CORREÇÃO DE ERRO: A função foi movida para cima para garantir que esteja definida antes de ser chamada na inicialização.
+        function updateMaterialsList() {
+            document.getElementById('active-network-label').textContent = activeTab === 'desbalanceada' ? 'Rede Desbalanceada' : 'Rede Balanceada';
+            const table = document.getElementById('materials-table');
+            let html = `<thead class="bg-gray-100"><tr><th class="py-2 px-1 text-left">Item</th><th class="py-2 px-1 text-center">Valor</th><th class="py-2 px-1 text-center">Qtde.</th><th class="py-2 px-1 text-right">Subt.</th><th class="w-8"></th></tr></thead><tbody>`;
+            let grandTotal = 0;
+            
+            let ctoCount = 0;
+            let spliceBoxCount = 0;
+            const hubSplitterCounts = {}, ctoSplitterCounts = {};
+            let totalAcopladores = 0;
+
+            if (activeTab === 'desbalanceada') {
+                networkSegments.forEach(seg => {
+                    const type = seg.type || 'cto';
+                    
+                    if(type === 'splice_box') {
+                        spliceBoxCount++;
+                    } else {
+                        ctoCount++;
+                    }
+
+                    if (seg.splitterHub && seg.splitterHub !== 'Ausente') { 
+                        hubSplitterCounts[seg.splitterHub] = (hubSplitterCounts[seg.splitterHub] || 0) + 1; 
+                    }
+                    if (type === 'cto' && seg.splitterCto && seg.splitterCto !== 'Ausente') { 
+                        ctoSplitterCounts[seg.splitterCto] = (ctoSplitterCounts[seg.splitterCto] || 0) + 1; 
+                        const parts = seg.splitterCto.split(':');
+                        if (parts.length === 2) { totalAcopladores += parseInt(parts[1], 10) || 0; }
+                    }
+                });
+            } else { // Rede Balanceada
+                balancedNetworkCtos.forEach(item => {
+                    if (item.type === 'splice_box') {
+                        spliceBoxCount++;
+                    } else {
+                        ctoCount++;
+                        if (item.splitterCto) {
+                            ctoSplitterCounts[item.splitterCto] = (ctoSplitterCounts[item.splitterCto] || 0) + 1;
+                            const parts = item.splitterCto.split(':');
+                            if (parts.length === 2) { totalAcopladores += parseInt(parts[1], 10) || 0; }
+                        }
+                    }
+                });
+                if (balancedConfig.primarySplitter) {
+                     hubSplitterCounts[balancedConfig.primarySplitter] = 1;
+                }
+            }
+            
+            const fiberTotals = {};
+            fiberRuns.forEach(run => {
+                if (!fiberTotals[run.type]) { fiberTotals[run.type] = 0; }
+                fiberTotals[run.type] += run.length || 0;
+            });
+
+            const fiberMaterialItems = Object.keys(fiberTotals).map(type => ({
+                id: `cabo_${type.replace(/[^a-z0-9]/gi, '_')}`,
+                name: `${type} (Lançada)`,
+                qty: `${fiberTotals[type]} m`,
+                numericQty: fiberTotals[type],
+                editable: false,
+            }));
+
+            const poleCount = fiberRuns.reduce((sum, run) => sum + run.length, 0) > 0 ? Math.ceil(fiberRuns.reduce((sum, run) => sum + run.length, 0) / 43) : 0;
+            const dropFiberPerCto = ctoCount * 16;
+
+            const otherMaterials = [
+                { id: 'caixa_emenda_ceo', name: 'Caixa de Emenda (CEO/CDR)', qty: spliceBoxCount, numericQty: spliceBoxCount, editable: true },
+                { id: 'cto_total', name: 'Total de CTOs', qty: ctoCount, numericQty: ctoCount, editable: false },
+                { id: 'fibra_drop_cto', name: 'Fibra Atendimento (16m/CTO)', qty: `${dropFiberPerCto} m`, numericQty: dropFiberPerCto, editable: false },
+                ...Object.entries(hubSplitterCounts).map(([name, count]) => ({ id: `hub_${name.replace(/[^a-zA-Z0-9]/g, '')}`, name: `Splitter ${activeTab === 'balanceada' ? 'Primário' : 'Desb.'} ${name}`, qty: count, numericQty: count, editable: false })), 
+                ...Object.entries(ctoSplitterCounts).map(([name, count]) => ({ id: `cto_${name.replace(/[^a-zA-Z0-9]/g, '')}`, name: `Splitter de CTO ${name}`, qty: count, numericQty: count, editable: false })), 
+                { id: 'acoplador', name: 'Acoplador Óptico SC/APC', qty: totalAcopladores, numericQty: totalAcopladores, editable: false },
+                { id: 'bap', name: 'Braçadeira BAP', qty: poleCount, numericQty: poleCount, editable: true }, 
+                { id: 'supa', name: 'Suporte (SUPA)', qty: poleCount, numericQty: poleCount, editable: true }, 
+                { id: 'alca', name: 'Alça Preformada', qty: poleCount * 2, numericQty: poleCount * 2, editable: true }, 
+                { id: 'roldana', name: 'Roldana', qty: 0, numericQty: 0, editable: true, manual: true }
+            ];
+            
+            let materialsHtml = '';
+            
+            const allStaticMaterials = [...fiberMaterialItems, ...otherMaterials];
+            allStaticMaterials.forEach(item => {
+                const unitPrice = materialPrices[item.id] || 0;
+                let itemQty = item.editable ? (manualMaterials[item.id] !== undefined ? parseInt(manualMaterials[item.id], 10) || 0 : item.numericQty) : item.numericQty;
+                
+                 if(item.manual) itemQty = manualMaterials[item.id] || 0;
+                
+                const subtotal = itemQty * unitPrice;
+                grandTotal += subtotal;
+
+                const qtyDisplay = item.qty.toString().includes('m') ? item.qty : itemQty;
+
+                materialsHtml += `<tr class="border-b">
+                    <td class="py-2 px-1 font-semibold align-middle">${item.name}</td>
+                    <td class="py-2 px-1 align-middle text-center">
+                        <input type="text" id="price-${item.id}" oninput="saveMaterialPrice(event, '${item.id}', this.value)" value="${unitPrice > 0 ? unitPrice.toFixed(2).replace('.', ',') : ''}" placeholder="0,00" class="w-16 text-center font-bold p-1 border rounded bg-gray-50 focus:bg-white">
+                    </td>
+                    <td class="py-2 px-1 text-center align-middle">`;
+
+                if (item.editable) {
+                    const onInputHandler = `oninput="saveManualMaterial(event, '${item.id}', this.value)"`;
+                    let qtyValue = manualMaterials[item.id] !== undefined ? manualMaterials[item.id] : item.qty;
+                     if(item.manual) qtyValue = manualMaterials[item.id] || 0;
+
+                    materialsHtml += `<input type="number" id="input-${item.id}" value="${qtyValue}" ${onInputHandler} class="w-12 text-center font-bold p-1 border rounded bg-gray-50 focus:bg-white">`;
+                } else {
+                    materialsHtml += `<span class="font-bold text-lg">${qtyDisplay}</span>`;
+                }
+                
+                materialsHtml += `</td>
+                    <td class="py-2 px-1 text-right align-middle font-bold">${subtotal.toFixed(2).replace('.',',')}</td>
+                    <td></td>
+                </tr>`;
+            });
+            
+            customMaterials.forEach((item, index) => {
+                const subtotal = (item.qty || 0) * (item.price || 0);
+                grandTotal += subtotal;
+
+                materialsHtml += `<tr class="border-b">
+                    <td class="py-2 px-1 font-semibold align-middle" contenteditable="true" onblur="handleCustomMaterialChange(event, ${index}, 'name')">${item.name}</td>
+                    <td class="py-2 px-1 align-middle text-center">
+                        <input type="text" value="${(item.price || 0).toFixed(2).replace('.', ',')}" oninput="handleCustomMaterialChange(event, ${index}, 'price')" placeholder="0,00" class="w-16 text-center font-bold p-1 border rounded bg-gray-50 focus:bg-white">
+                    </td>
+                    <td class="py-2 px-1 text-center align-middle">
+                        <input type="number" value="${item.qty || 0}" oninput="handleCustomMaterialChange(event, ${index}, 'qty')" class="w-12 text-center font-bold p-1 border rounded bg-gray-50 focus:bg-white">
+                    </td>
+                    <td class="py-2 px-1 text-right align-middle font-bold">${subtotal.toFixed(2).replace('.',',')}</td>
+                    <td class="py-2 px-1 text-center align-middle">
+                        <button onclick="removeCustomMaterial(${index})" class="p-1 text-red-500 hover:text-red-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </button>
+                    </td>
+                </tr>`;
+            });
+
+
+            html += materialsHtml;
+            html += `</tbody>
+                <tfoot class="bg-gray-100 font-bold">
+                    <tr>
+                        <td colspan="4" class="py-3 px-2 text-right text-lg">Custo Total:</td>
+                        <td class="py-3 px-2 text-right text-lg">${grandTotal.toFixed(2).replace('.',',')}</td>
+                    </tr>
+                </tfoot>`;
+            table.innerHTML = html;
+
+            const tableContainer = table.parentElement;
+            let addButton = document.getElementById('add-custom-material-btn');
+            if (!addButton) {
+                addButton = document.createElement('button');
+                addButton.id = 'add-custom-material-btn';
+                addButton.textContent = '+ Adicionar Item';
+                addButton.className = 'mt-4 bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300';
+                addButton.onclick = addCustomMaterial;
+                tableContainer.appendChild(addButton);
+            }
+
+            const detailsContainer = document.getElementById('materials-calculation-details');
+            detailsContainer.innerHTML = `
+                <h3 class="text-xl font-bold text-center text-gray-700 mb-4 border-t pt-4">Memória de Cálculo</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm bg-gray-50 p-4 rounded-lg">
+                    <div class="flex justify-between border-b pb-1">
+                        <span class="font-semibold text-gray-600">Total de Fibra Lançada:</span>
+                        <span class="font-bold text-gray-800">${fiberRuns.reduce((sum, run) => sum + run.length, 0).toFixed(0)} m</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-1">
+                        <span class="font-semibold text-gray-600">Total de Postes (1 a cada 43m):</span>
+                        <span class="font-bold text-gray-800">${poleCount}</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-1 md:col-span-2">
+                        <span class="font-semibold text-gray-600">Folga de Segurança (5% por tipo de cabo):</span>
+                        <span class="font-bold text-gray-800">Calculado individualmente</span>
+                    </div>
+                </div>
+            `;
+        }
+
+
         function switchTab(tabName) {
             activeTab = tabName;
             const tabs = ['desbalanceada', 'balanceada'];
@@ -361,6 +632,7 @@
             document.getElementById(`tab-panel-${tabName}`).classList.remove('hidden');
             document.getElementById(`tab-${tabName}`).classList.add('tab-active');
             triggerAutoSave();
+            updateMaterialsList();
         }
 
         function showModal(title, content) {
@@ -378,29 +650,19 @@
             }
         }
 
-        function showDescriptionModal(index, networkType) {
-            currentCtoInfo = { index, networkType };
-            const modal = document.getElementById('description-modal');
-            const descriptionInput = document.getElementById('signal-description-input');
+        function handleDescriptionChange(event, index, networkType) {
             const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
-            descriptionInput.value = network[index].description || '';
-            modal.classList.remove('hidden');
-        }
-
-        function saveDescription() {
-            if (currentCtoInfo !== null) {
-                const { index, networkType } = currentCtoInfo;
-                const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
-                network[index].description = document.getElementById('signal-description-input').value;
-                if (networkType === 'unbalanced') renderUnbalancedNetwork();
-                else renderBalancedNetwork();
-                 triggerAutoSave();
+            if (network[index]) {
+                network[index].description = event.target.innerText.trim();
+                const card = event.target.closest('.cto-card-print');
+                if(card){
+                    const printableDesc = card.querySelector('.printable-only-description span:last-child');
+                    if(printableDesc) {
+                        printableDesc.textContent = network[index].description || 'N/A';
+                    }
+                }
+                triggerAutoSave();
             }
-            closeDescriptionModal();
-        }
-        
-        function closeDescriptionModal() {
-            document.getElementById('description-modal').classList.add('hidden');
         }
 
         function renderUnbalancedNetwork() {
@@ -413,7 +675,8 @@
                 if(segment.type === 'splice_box'){
                     spliceBoxCounter++;
                     displayIndex = spliceBoxCounter;
-                } else {
+                }
+                else {
                     ctoCounter++;
                     displayIndex = ctoCounter;
                 }
@@ -457,7 +720,7 @@
                 title = `CEO/CDR-${String(finalIndex).padStart(2, '0')}`;
             } else if (isUnbalanced) {
                 title = `CTO-${String(finalIndex).padStart(2, '0')}`;
-            } else { 
+            } else { // Balanced CTOs
                 title = `CTO Bal.-${String(finalIndex).padStart(2, '0')}`;
             }
 
@@ -467,7 +730,12 @@
             card.className = "cto-card-print flex flex-col items-center bg-gray-50 rounded-lg shadow-md border p-3";
             card.style.width = "280px";
             
-            const removeAction = isUnbalanced ? `removeNetworkSegment(${index})` : `removeBalancedItem(${index})`;
+            let removeAction = '';
+            if(isUnbalanced) {
+                removeAction = `removeNetworkSegment(${index})`;
+            } else {
+                removeAction = `removeBalancedItem(${index})`;
+            }
 
             let cardHtml = `
             <h3 class="relative text-lg font-bold mb-3 px-4 py-1 rounded-full border border-gray-300" 
@@ -491,11 +759,12 @@
              <div class="flex items-center justify-start w-full mb-1.5 px-2 gap-4">
                 <div class="flex items-center">
                     <label class="text-xs font-semibold text-gray-600 mr-1">Dist(m):</label>
-                    <input id="cto-${cardIdPrefix}-${index}-distance" type="number" value="${data.distance || 0}" oninput="handleCtoDataChange(event, ${index}, '${networkType}', 'distance')" class="input-field !w-16" />
+                    <!-- MUDANÇA PARA ONCHANGE/ONINPUT: onchange para estabilidade (campos numéricos), oninput para seleções -->
+                    <input id="cto-${cardIdPrefix}-${index}-distance" type="number" value="${data.distance || 0}" onchange="handleCtoDataChange(event, ${index}, '${networkType}', 'distance')" class="input-field !w-16" />
                 </div>
                 <div class="flex items-center">
-                    <label class="text-xs font-semibold text-gray-600 mr-1">Fusões:</label>
-                    <input id="cto-${cardIdPrefix}-${index}-spliceCount" type="number" value="${data.spliceCount || 0}" oninput="handleCtoDataChange(event, ${index}, '${networkType}', 'spliceCount')" class="input-field !w-12" />
+                    <label class="text-xs font-semibold text-gray-600 mr-1">${isSpliceBox ? 'Fusões:' : 'Fusões:'}</label>
+                    <input id="cto-${cardIdPrefix}-${index}-spliceCount" type="number" value="${data.spliceCount || 0}" onchange="handleCtoDataChange(event, ${index}, '${networkType}', 'spliceCount')" class="input-field !w-12" />
                 </div>
             </div>
             `;
@@ -526,7 +795,7 @@
                 cardHtml += `
                 <div class="flex items-center w-full mb-1.5 px-2">
                     <label class="flex-1 text-xs font-semibold text-gray-600">Cor da Fibra:</label>
-                    <select id="cto-${cardIdPrefix}-${index}-colorGroup" oninput="handleCtoDataChange(event, ${index}, '${networkType}', 'colorGroup')" class="input-field font-semibold" style="background-color:${selectedColor.hex}; color:${selectedColor.text}; border-color: #999;">
+                    <select id="cto-${cardIdPrefix}-${index}-colorGroup" onchange="handleCtoDataChange(event, ${index}, '${networkType}', 'colorGroup')" class="input-field font-semibold" style="background-color:${selectedColor.hex}; color:${selectedColor.text}; border-color: #999;">
                         ${FIBER_COLORS.map((color, colorIndex) => `<option value="${colorIndex}" ${colorIndex === (data.colorGroup || 0) ? 'selected' : ''} style="background-color:${color.hex}; color:${color.text};">${colorIndex + 1} - ${color.name}</option>`).join('')}
                     </select>
                 </div>`;
@@ -537,41 +806,93 @@
             let parameterRows = [];
             if (isUnbalanced) {
                 parameterRows = isSpliceBox ? UNBALANCED_SPLICE_BOX_ROWS : UNBALANCED_CTO_ROWS;
-            } else { 
-                if (!isSpliceBox) {
-                    parameterRows = [
-                        { label: 'Splitter CTO', key: 'splitterCto', type: 'select_cto' },
-                        { label: 'Sinal Final CTO', key: 'sinalFinal', type: 'result_final' }
-                    ];
+            } else { // Rede Balanceada
+                if (!isSpliceBox) { // Apenas para CTOs balanceados
+                    parameterRows = BALANCED_CTO_ROWS;
+                } else {
+                    parameterRows = BALANCED_SPLICE_BOX_ROWS;
                 }
             }
             
             parameterRows.forEach(row => {
                 const value = data[row.key];
+                const elementId = `cto-${cardIdPrefix}-${index}-${row.key}`; // ID ÚNICO
+                
                 if (row.type === 'result_final') {
                     const finalSignal = parseFloat(value);
                     const colorClass = getSignalColorClass(finalSignal);
-                    cardHtml += `<div class="flex justify-between items-center w-full mb-1.5 px-2"><label class="text-xs font-semibold text-gray-600">${row.label}:</label><div class="px-3 py-1 text-sm font-bold rounded-full ${colorClass}">${value || '---'} dBm</div></div>`;
+                    cardHtml += `<div class="flex justify-between items-center w-full mb-1.5 px-2"><label class="text-xs font-semibold text-gray-600">${row.label}:</label><div id="${elementId}" class="px-3 py-1 text-sm font-bold rounded-full ${colorClass}">${value || '---'} dBm</div></div>`;
                 } else {
                     cardHtml += `<div class="flex items-center w-full mb-1.5 px-2"><label class="flex-1 text-xs font-semibold text-gray-600">${row.label}:</label>`;
                     switch(row.type) {
-                        case 'select_hub': cardHtml += `<select oninput="handleCtoDataChange(event, ${index}, '${networkType}', 'splitterHub')" class="input-field">${getSplitterOptions('hub', data.splitterHub)}</select>`; break;
+                        case 'select_hub': cardHtml += `<select id="${elementId}" onchange="handleCtoDataChange(event, ${index}, '${networkType}', 'splitterHub')" class="input-field">${getSplitterOptions('hub', data.splitterHub)}</select>`; break;
                         case 'select_cto':
                              const optionsType = isUnbalanced ? 'cto' : 'balanced';
-                             cardHtml += `<select oninput="handleCtoDataChange(event, ${index}, '${networkType}', 'splitterCto')" class="input-field">${getSplitterOptions(optionsType, data.splitterCto)}</select>`;
+                             cardHtml += `<select id="${elementId}" onchange="handleCtoDataChange(event, ${index}, '${networkType}', 'splitterCto')" class="input-field">${getSplitterOptions(optionsType, data.splitterCto)}</select>`;
                              break;
-                        case 'result': cardHtml += `<input type="text" value="${value || '---'}" readonly class="result-field" />`; break;
-                        case 'result_detail': cardHtml += `<div class="loss-detail">${value || '---'}</div>`; break;
+                        case 'result': cardHtml += `<input id="${elementId}" type="text" value="${value || '---'}" readonly class="result-field" />`; break;
+                        case 'result_detail': cardHtml += `<div id="${elementId}" class="loss-detail">${value || '---'}</div>`; break;
                     }
                     cardHtml += `</div>`;
                 }
             });
             
-            cardHtml += `<div class="mt-2 w-full text-center text-xs text-gray-500 font-bold no-print flex items-center justify-between"><span>Sinal Medido em Campo</span><button onclick="showDescriptionModal(${index}, '${networkType}')" class="p-1 rounded-full text-white bg-gray-500 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400" title="Adicionar/Editar Descrição"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg></button></div><div class="manual-signal-field no-print"><span class="text-xs text-gray-500 italic">${data.description || 'Nenhuma descrição salva.'}</span></div><div class="printable-only-description"><span class="text-xs font-bold text-gray-700">Descrição: </span><span>${data.description || 'N/A'}</span></div></div>`;
+            cardHtml += `
+            <div class="mt-2 w-full text-center">
+                <div class="text-xs text-gray-500 font-bold mb-1">Descrição</div>
+                <div onblur="handleDescriptionChange(event, ${index}, '${networkType}')" contenteditable="true" data-placeholder="Clique para editar..." class="manual-signal-field no-print text-gray-700 not-italic border border-gray-300 rounded-md p-1 min-h-[40px] bg-white">${data.description || ''}</div>
+                <div class="printable-only-description"><span class="text-xs font-bold text-gray-700">Descrição: </span><span>${data.description || 'N/A'}</span></div>
+            </div>
+            </div>`;
             card.innerHTML = cardHtml;
             return card;
         }
-    
+        
+        // Função para atualizar apenas os campos de saída da Rede Desbalanceada
+        function updateUnbalancedOutput(segment, index) {
+            const cardIdPrefix = 'U';
+            
+            // Perda de Trecho (dB)
+            const perdaTrechoEl = document.getElementById(`cto-${cardIdPrefix}-${index}-perdaTotalTrecho`);
+            if (perdaTrechoEl) perdaTrechoEl.textContent = segment.perdaTotalTrecho || '---';
+
+            // Sinal Entrada Hub (dBm)
+            const sinalEntradaEl = document.getElementById(`cto-${cardIdPrefix}-${index}-sinalEntradaHub`);
+            if (sinalEntradaEl) sinalEntradaEl.value = segment.sinalEntradaHub || '---';
+            
+            // Perda Passagem (dB)
+            const perdaPassagemEl = document.getElementById(`cto-${cardIdPrefix}-${index}-perdaPassagemHub`);
+            if (perdaPassagemEl) perdaPassagemEl.textContent = segment.perdaPassagemHub || '---';
+
+            // Sinal Saída Hub (dBm)
+            const sinalSaidaEl = document.getElementById(`cto-${cardIdPrefix}-${index}-sinalSaidaHub`);
+            if (sinalSaidaEl) sinalSaidaEl.value = segment.sinalSaidaHub || '---';
+            
+            // Sinal Final CTO (dBm)
+            if (segment.type !== 'splice_box') {
+                const sinalFinalEl = document.getElementById(`cto-${cardIdPrefix}-${index}-sinalFinalCto`);
+                if (sinalFinalEl) {
+                    sinalFinalEl.textContent = segment.sinalFinalCto || '---';
+                    sinalFinalEl.className = sinalFinalEl.className.split(' ').filter(c => !c.startsWith('bg-') && !c.startsWith('border-') && !c.startsWith('text-')).join(' ') + ' ' + getSignalColorClass(parseFloat(segment.sinalFinalCto));
+                }
+            }
+        }
+        
+        // Função para atualizar apenas os campos de saída da Rede Balanceada
+        function updateBalancedOutput(segment, index) {
+            const cardIdPrefix = 'B';
+            
+            if (segment.type !== 'splice_box') {
+                 // Sinal Final CTO (dBm)
+                const sinalFinalEl = document.getElementById(`cto-${cardIdPrefix}-${index}-sinalFinal`);
+                if (sinalFinalEl) {
+                    sinalFinalEl.textContent = segment.sinalFinal || '---';
+                    sinalFinalEl.className = sinalFinalEl.className.split(' ').filter(c => !c.startsWith('bg-') && !c.startsWith('border-') && !c.startsWith('text-')).join(' ') + ' ' + getSignalColorClass(parseFloat(segment.sinalFinal));
+                }
+            }
+            // Não há mais campos de perda detalhada ou sinal de passagem na Rede Balanceada simples.
+        }
+
         function recalculateUnbalanced() {
             let powerForNextSegment = oltPower;
             
@@ -612,23 +933,48 @@
             renderUnbalancedNetwork();
         }
 
+        // FUNÇÃO RECALCULATEBALANCED CORRIGIDA
         function recalculateBalanced() {
+            // 1. Calcula o sinal de ENTRADA na linha principal (após o Splitter Primário/CEOA)
             let powerForChain = oltPower - (splitterLosses[balancedConfig.primarySplitter]?.drop || 0);
 
+            // 2. Rastreia o sinal atual da linha (que pode ser degradado por CEO/CDR)
+            let currentLinePower = powerForChain;
+
             balancedNetworkCtos.forEach(segment => {
-                const inputPower = powerForChain;
-                const distanceLoss = ((segment.distance || 0) / 1000) * FIBER_LOSS_PER_KM;
+                const distanceLoss = (segment.distance || 0) / 1000 * FIBER_LOSS_PER_KM;
 
                 if (segment.type === 'splice_box') {
+                    // --- É um CEO/CDR ---
+                    
                     const fusionLoss = (segment.spliceDetails?.length || 0) * FUSION_SPLICE_LOSS;
                     segment.sinalFinal = null; 
-                    powerForChain = inputPower - distanceLoss - fusionLoss;
+                    
+                    // A linha continua, mas perde potência por distância e fusões.
+                    currentLinePower = currentLinePower - distanceLoss - fusionLoss;
+                    
                 } else { 
+                    // --- É um CTO Bal. ---
+
+                    // Sinal de entrada do CTO é a potência atual da linha antes da atenuação por distância/fusão no trecho.
+                    const inputPowerForThisCto = currentLinePower;
+
+                    // Calcula a atenuação deste trecho
                     const spliceLoss = (segment.spliceCount || 0) * FUSION_SPLICE_LOSS;
                     const secondarySplitterLoss = splitterLosses[segment.splitterCto]?.drop || 0;
-                    const finalSignal = inputPower - distanceLoss - spliceLoss - secondarySplitterLoss;
-                    segment.sinalFinal = finalSignal.toFixed(2);
-                    powerForChain = -Infinity;
+                    
+                    if (segment.splitterCto === 'Ausente') {
+                         segment.sinalFinal = null;
+                    } else {
+                        const finalSignal = inputPowerForThisCto - distanceLoss - spliceLoss - secondarySplitterLoss;
+                        
+                        // Garante que o sinal final é um número válido antes de formatar
+                        if (!isNaN(finalSignal) && isFinite(finalSignal)) {
+                            segment.sinalFinal = finalSignal.toFixed(2);
+                        } else {
+                             segment.sinalFinal = null;
+                        }
+                    }
                 }
             });
 
@@ -652,6 +998,14 @@
 
             document.getElementById('map-link-input-unbalanced').value = googleMapsUrl;
             document.getElementById('map-link-input-balanced').value = googleMapsUrl;
+            
+            // Garante que o CTO-01 inicial está presente se o array estiver vazio após o carregamento
+            if (networkSegments.length === 0) {
+                 networkSegments.push({
+                    type: 'cto', splitterHub: 'Ausente', splitterCto: 'Ausente',
+                    distance: 0, spliceCount: 0, geo: null, description: '', colorGroup: 0
+                });
+            }
             
             recalculateUnbalanced();
             recalculateBalanced();
@@ -681,37 +1035,41 @@
         }
     
         function handleCtoDataChange(event, index, networkType, field) {
-             const focusedElementId = event.target.id;
-             const selectionStart = event.target.selectionStart;
-             clearTimeout(debounceTimer);
-             debounceTimer = setTimeout(() => {
-                const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
-                let value = event.target.value;
+            const focusedElementId = event.target.id;
+            
+            // CORREÇÃO: Limpar entrada para aceitar apenas dígitos se for distância ou contagem de fusões
+            if (field === 'distance' || field === 'spliceCount') {
+                // Mantém apenas números na entrada DOM para evitar o problema visual enquanto digita
+                event.target.value = event.target.value.replace(/[^0-9]/g, '');
+            }
+            
+            // REMOÇÃO DO DEBOUNCE AQUI PARA ESTABILIDADE MÁXIMA NA ENTRADA NUMÉRICA (onchange)
 
-                if (field === 'distance' || field === 'spliceCount' || field === 'colorGroup') {
-                    value = parseFloat(value) || 0;
-                }
-                 
-                if (network[index]) { 
-                    network[index][field] = value; 
-                }
-                
-                if (networkType === 'unbalanced' && field === 'splitterCto') {
-                    networkSegments[index][field] = value;
-                }
+            const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
+            let value = event.target.value;
 
-                if (networkType === 'unbalanced') recalculateUnbalanced();
-                else recalculateBalanced();
-                
-                const focusedElement = document.getElementById(focusedElementId);
-                if (focusedElement) {
-                    focusedElement.focus({ preventScroll: true });
-                    if (focusedElement.setSelectionRange) {
-                        focusedElement.setSelectionRange(selectionStart, selectionStart);
-                    }
-                }
-                triggerAutoSave();
-             }, 500);
+            // Converter para número (ou 0)
+            if (field === 'distance' || field === 'spliceCount') {
+                value = parseInt(value, 10) || 0;
+            } else if (field === 'colorGroup' || field === 'splitterHub' || field === 'splitterCto') {
+                // Para campos de seleção (onchange/oninput):
+                value = field === 'colorGroup' ? parseInt(value, 10) : value;
+            }
+            
+            if (network[index]) { 
+                network[index][field] = value; 
+            }
+            
+            if (networkType === 'unbalanced' && field === 'splitterCto') {
+                networkSegments[index][field] = value;
+            }
+
+            if (networkType === 'unbalanced') recalculateUnbalanced();
+            else recalculateBalanced();
+            
+            // As seleções e Adições/Remoções de CTOs forçam o re-render (feito nas funções add/remove/select), o que é aceitável.
+            
+            triggerAutoSave();
         }
 
         function handleBalancedConfigChange(field, value) {
@@ -773,7 +1131,7 @@
             }
         }
 
-       function openInGoogleMaps(index, networkType) {
+        function openInGoogleMaps(index, networkType) {
             const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
             const cto = network[index];
             
@@ -785,11 +1143,11 @@
             if (googleMapsUrl && googleMapsUrl.trim() !== '') {
                  const geoString = `${cto.geo.lat.toFixed(5)}, ${cto.geo.lon.toFixed(5)}`;
                  navigator.clipboard.writeText(geoString).then(() => {
-                     window.open(googleMapsUrl, '_blank');
-                     showModal("Coordenadas Copiadas", `As coordenadas "${geoString}" foram copiadas. Agora, cole-as no seu mapa para adicionar o ponto.`);
-                 }, () => {
-                     showModal("Erro ao Copiar", "Não foi possível copiar as coordenadas para a área de transferência.");
-                 });
+                      window.open(googleMapsUrl, '_blank');
+                      showModal("Coordenadas Copiadas", `As coordenadas "${geoString}" foram copiadas. Agora, cole-as no seu mapa para adicionar o ponto.`);
+                  }, () => {
+                      showModal("Erro ao Copiar", "Não foi possível copiar as coordenadas para a área de transferência.");
+                  });
             } else {
                  const lat = cto.geo.lat;
                  const lon = cto.geo.lon;
@@ -906,6 +1264,7 @@
                 colorGroup: (lastSegment.colorGroup + 1) % 12
             });
             recalculateUnbalanced();
+            renderUnbalancedNetwork();
             triggerAutoSave();
         }
 
@@ -913,28 +1272,37 @@
             if (networkSegments.length > 0) {
                 networkSegments.splice(index, 1);
                 recalculateUnbalanced();
+                renderUnbalancedNetwork();
                 triggerAutoSave();
             }
         }
         
+        // FUNÇÃO ADICIONADA: Adiciona CEO/CDR para Rede Balanceada e Desbalanceada
         function addSpliceBox(networkType) {
             const network = networkType === 'unbalanced' ? networkSegments : balancedNetworkCtos;
             const lastSegment = network.length > 0 ? network[network.length - 1] : { colorGroup: -1, outgoingColorGroup: 0 };
+            // A cor de entrada para a nova caixa é a cor de saída da última caixa (se for um CEO/CDR) ou a próxima cor (se for um CTO)
             const incomingColor = lastSegment.outgoingColorGroup !== undefined ? lastSegment.outgoingColorGroup : (lastSegment.colorGroup + 1) % 12;
 
             network.push({
                 type: 'splice_box',
                 distance: 0,
-                spliceCount: 0,
+                spliceCount: 0, // Fusões simples (na verdade, deve usar spliceDetails.length)
                 geo: null,
                 description: '',
                 colorGroup: incomingColor,
                 outgoingColorGroup: (incomingColor + 1) % 12,
-                spliceDetails: []
+                spliceDetails: [] // Usado para armazenar fusões cor-a-cor
             });
             
-            if(networkType === 'unbalanced') recalculateUnbalanced();
-            else recalculateBalanced();
+            if(networkType === 'unbalanced') {
+                recalculateUnbalanced();
+                renderUnbalancedNetwork();
+            }
+            else {
+                recalculateBalanced();
+                renderBalancedNetwork();
+            }
             triggerAutoSave();
         }
 
@@ -951,6 +1319,7 @@
                 splitterCto: '1:8'
             });
             recalculateBalanced();
+            renderBalancedNetwork();
             triggerAutoSave();
         }
 
@@ -958,6 +1327,7 @@
             if (balancedNetworkCtos.length > 0) {
                 balancedNetworkCtos.splice(index, 1);
                 recalculateBalanced();
+                renderBalancedNetwork();
                 triggerAutoSave();
             }
         }
@@ -1000,7 +1370,7 @@
                                 <div><strong>Nº de Fusões:</strong> ${segment.spliceDetails?.length || 0}</div>
                                 <div><strong>Geolocalização:</strong> ${geoText} ${googleMapsLink}</div>
                             </div>
-                             <div style="margin-top: 1rem;">
+                           <div style="margin-top: 1rem;">
                                 <strong>Notas de Campo:</strong>
                                 <p style="margin-top: 0.25rem; border-bottom: 1px solid #d1d5db; padding-bottom: 0.25rem;">${segment.description || '________________________________________________'}</p>
                             </div>
@@ -1266,5 +1636,3 @@
     </script>
 </body>
 </html>
-
-
